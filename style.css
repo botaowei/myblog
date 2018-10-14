@@ -5,6 +5,7 @@ margin: 0%;
 }
 a{
     color:inherit;
+    text-decoration: none;
 }
 /* color是可以继承的 */
 .clearfix::after{
@@ -12,20 +13,33 @@ a{
     display: block;
     clear: both;
 }
-.tobnavbar .logo .rs{
-    font-size: 24px;
-    font-family: "Arial Black"
+.topnavbar{
+    padding-top: 20px;
+    padding-left: 16px;
 }
-.tobnavbar .logo .card{
-    font-size: 24px;
-    font-family: "Arial Black"
+.topnavbar .logo{
+    padding-top: 8px;
 }
-.topnavbar nav {
+.topnavbar .logo .rs{
+    color: #e6686a;
+    font-size: 24px;
+    font-family: "Cooper black";
+    font-weight: bold;
+    margin-right: 4px;
+}
+.topnavbar .logo .card{
+    color: #9a9da2;
+    font-size: 24px;
+    font-family: "Cooper black";
+    font-weight: bold;
+
+}
+.topnavbar>nav {
     font-size: 13px;
     padding-top: 8px;
     padding-bottom: 8px;
 }
-.topnavbar nav a{
+.topnavbar>nav>a {
     color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
     font-weight: bold;
@@ -39,7 +53,7 @@ a{
     margin-right: 17px;
 }
 .topnavbar>nav>ul>li>a{
-    font-size: 12px;
+    font-size: 16px;
     color: grey;
     text-decoration: none; 
     font-weight: bold;
