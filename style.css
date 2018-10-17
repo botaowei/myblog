@@ -1,6 +1,6 @@
 body {
-background: black;
-color: white;
+background: blanchedalmond;
+/* color: white; */
 margin: 0%;
 }
 a{
@@ -13,9 +13,16 @@ a{
     display: block;
     clear: both;
 }
+/* 文字换行套路 */
 .topnavbar{
     padding-top: 20px;
     padding-left: 16px;
+    position: fixed;
+    /* 脱离文档流 */
+    top:0;
+    left: 0;
+    width: 100%;
+    /* 不要明确宽度，容易出现bug */
 }
 .topnavbar .logo{
     padding-top: 8px;
@@ -28,7 +35,7 @@ a{
     margin-right: 4px;
 }
 .topnavbar .logo .card{
-    color: #9a9da2;
+    color: black;
     font-size: 24px;
     font-family: "Cooper black";
     font-weight: bold;
@@ -40,7 +47,7 @@ a{
     padding-bottom: 8px;
 }
 .topnavbar>nav>a {
-    color: rgba(255, 255, 255, 0.7);
+    color: white;
     text-decoration: none;
     font-weight: bold;
 }
@@ -54,7 +61,7 @@ a{
 }
 .topnavbar>nav>ul>li>a{
     font-size: 16px;
-    color: grey;
+    color: white;
     text-decoration: none; 
     font-weight: bold;
     border-bottom: 1px solid transparent;
@@ -64,4 +71,47 @@ a{
 }
 .topnavbar>nav>ul>li>a:hover{
     border-bottom: 1px solid red;
+}
+.banner{
+height: 515px;
+/* 高度是bug的来源 */
+background-image: url(./img/bg.jpeg);
+background-position: center center;
+background-size: cover;
+}
+.usercard{
+    border: 1px solid ;
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+}
+.usercard .welcome{
+    background:#e6686a;
+    color:white;
+    display:inline-block;
+    padding: 4px 10px 0px 10px;
+    line-height: 22px;
+    position: relative;
+/* 绝对定位套路 相对于父元素中的第一个relative定位*/
+}
+.usercard .welcome .triangle{
+    border: 10px solid transparent;
+    width: 0px;
+    height: 0px;
+    border-top-color: black;
+    border-right-color: transparent;
+    border-left-color: #e6686a;
+    border-top-width: 0px;
+    position: absolute;
+    /* 绝对定位套路 需要定位的元素加 absolute*/
+    left: 4px;
+    top: 100%;
+}
+.usercard .picture{
+    float: left;
+}
+.usercard .text{
+    float: left;
+    padding: 0 0 0 50px;
 }
