@@ -7,6 +7,15 @@ a{
     color:inherit;
     text-decoration: none;
 }
+*{
+    margin: 0%;
+    padding: 0%;
+}
+hr{
+    height: 0;
+    border: none;
+    border-top: 1px solid gray;
+}
 /* color是可以继承的 */
 .clearfix::after{
     content: '';
@@ -94,6 +103,7 @@ background-size: cover;
     line-height: 22px;
     position: relative;
 /* 绝对定位套路 相对于父元素中的第一个relative定位*/
+    margin-bottom: 10px;
 }
 .usercard .welcome .triangle{
     border: 10px solid transparent;
@@ -114,7 +124,30 @@ background-size: cover;
 .usercard .text{
     float: left;
     padding: 0 0 0 50px;
+    width: 480px;
+}
+.usercard .text h1{
+    margin-top: 18px;
+}
+.usercard .text hr{
+    margin: 20px 0px;
 }
 .usercard .pictureAndText{
-    padding: 
+    padding: 50px;
+}
+.usercard dl dt,
+.usercard dl dd{
+    float: left;
+    padding: 5px 0px;
+}
+.usercard dl dt{
+    width: 30%;
+    font-weight: bold;
+}
+.usercard dl dd{
+    width: 70%;
+    color: gray;
+}
+.usercard>footer.media{
+    background-color: #e6686a
 }
