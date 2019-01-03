@@ -24,14 +24,16 @@ hr{
 }
 /* 文字换行套路 */
 .topnavbar{
-    padding-top: 20px;
-    padding-left: 16px;
+    padding: 20px 0;
     position: fixed;
     /* 脱离文档流 */
-    top:0;
+    top: 0;
     left: 0;
     width: 100%;
     /* 不要明确宽度，容易出现bug */
+}
+.topnavbar-inner{
+    padding: 0 16px 0 16px;
 }
 .topnavbar .logo{
     padding-top: 8px;
@@ -50,25 +52,25 @@ hr{
     font-weight: bold;
 
 }
-.topnavbar>nav {
+.topnavbar nav {
     font-size: 13px;
     padding-top: 8px;
     padding-bottom: 8px;
 }
-.topnavbar>nav>a {
+.topnavbar nav>a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
-.topnavbar>nav>ul{
+.topnavbar nav>ul{
     list-style:none; margin: 0; padding: 0;
 }
-.topnavbar>nav>ul>li{
+.topnavbar nav>ul>li{
     float: left;
     margin-left: 17px;
     margin-right: 17px;
 }
-.topnavbar>nav>ul>li>a{
+.topnavbar nav>ul>li>a{
     font-size: 16px;
     color: white;
     text-decoration: none; 
@@ -78,7 +80,7 @@ hr{
     padding-bottom: 5px;
     display: block;
 }
-.topnavbar>nav>ul>li>a:hover{
+.topnavbar nav>ul>li>a:hover{
     border-bottom: 1px solid red;
 }
 .banner{
@@ -86,11 +88,18 @@ height: 515px;
 /* 高度是bug的来源 */
 background-position: center center;
 background-size: cover;
+/*按比例缩放，即自适应*/
+}
+.banner .mask{
+    height: 515px;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 .usercard{
     max-width: 940px;
+    /*小于940px会自适应*/
     margin-left: auto;
     margin-right: auto;
+    /*div居中套路*/
     background-color: white;
 }
 .usercard .welcome{
@@ -98,6 +107,7 @@ background-size: cover;
     color:white;
     display:inline-block;
     padding: 4px 10px 0px 10px;
+    /*从内往外做，可以自适应并减少bug*/
     line-height: 22px;
     position: relative;
 /* 绝对定位套路 相对于父元素中的第一个relative定位*/
@@ -118,12 +128,15 @@ background-size: cover;
 }
 .usercard .picture{
     float: left;
+    /*左右布局套路*/
 }
 .usercard .text{
     float: left;
+    /*左右布局套路*/
     padding: 0 0 0 50px;
     width: 480px;
 }
+
 .usercard .text h1{
     margin-top: 18px;
 }
@@ -152,6 +165,7 @@ background-size: cover;
 }
 .usercard>footer.media> a{
     display: inline-block;
+    /*用a样式包裹住*/
     width: 40px;
     line-height: 30px;
     padding: 5px 0;
@@ -166,5 +180,5 @@ background: #cf5d5f;
     height: 30px;
     fill: white;
     vertical-align: top;
-    
+    /*减少下边框溢出*/
 }

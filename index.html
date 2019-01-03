@@ -17,24 +17,29 @@
     </style>
 </head>
 <body>
-    <div class="topnavbar clearfix">
-        <a class="logo" href="#" alt="logo" style="float:left">
-            <span class="rs">RS</span><span class="card">card</span>
-        </a>
-        <nav style="float:right"><!-- navigation -->
-            <ul class="clearfix">
-            <li><a href="#">关于</a></li>
-            <li><a href="#">技能</a></li>
-            <li><a href="#">经验</a></li>
-            <li><a href="#">作品</a></li>
-            <li><a href="#">博客</a></li>
-            <li><a href="#">日历</a></li>
-            <li><a href="#">联系方式</a></li>
-            <li><a href="#">其他</a></li>
-            </ul>
-        </nav>
+    <div class="topnavbar ">
+        <div class="topnavbar-inner clearfix">
+                <a class="logo" href="#" alt="logo" style="float:left">
+                        <span class="rs">RS</span><span class="card">card</span>
+                    </a>
+                    <nav style="float:right"><!-- navigation -->
+                        <ul class="clearfix">
+                        <li><a href="#">关于</a></li>
+                        <li><a href="#">技能</a></li>
+                        <li><a href="#">经验</a></li>
+                        <li><a href="#">作品</a></li>
+                        <li><a href="#">博客</a></li>
+                        <li><a href="#">日历</a></li>
+                        <li><a href="#">联系方式</a></li>
+                        <li><a href="#">其他</a></li>
+                        </ul>
+                    </nav>
+        </div>
+        
     </div>
-    <div class="banner" style="background-image:url(http://myblog-photo.test.upcdn.net/bg.webp); color: 1px solid red;"></div>
+    <div class="banner" style="background-image:url(http://myblog-photo.test.upcdn.net/bg.webp); color: 1px solid red;">
+    <div class="mask"></div>
+    </div>
     <main>
         <div class="usercard">
             <div class="pictureAndText clearfix">
@@ -61,6 +66,23 @@
                 </div>
             </div>
             <footer class="media">
+ <!--simbol引用，点击icon帮助
+第一步：拷贝项目下面生成的symbol代码：引用
+<script src="//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js"></script>
+第二步：加入通用css代码（引入一次就行）：
+<style type="text/css">
+    .icon {
+       width: 1em; height: 1em;
+       vertical-align: -0.15em;
+       fill: currentColor;
+       overflow: hidden;
+    }
+</style>
+第三步：挑选相应图标并获取类名，应用于页面：
+<svg class="icon" aria-hidden="true">
+    <use xlink:href="#icon-xxx"></use>
+</svg>
+-->
                 <a href="#">
                         <svg class="icon" aria-hidden="true">
                                 <use xlink:href="#icon-github"></use>
