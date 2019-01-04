@@ -1,5 +1,5 @@
 body {
-background: blanchedalmond;
+background: #efefef;
 /* color: white; */
 margin: 0%;
 }
@@ -72,7 +72,7 @@ hr{
 }
 .topnavbar nav>ul>li>a{
     font-size: 16px;
-    color: white;
+    color: gainsboro;
     text-decoration: none; 
     font-weight: bold;
     border-bottom: 1px solid transparent;
@@ -180,5 +180,31 @@ background: #cf5d5f;
     height: 30px;
     fill: white;
     vertical-align: top;
-    /*减少下边框溢出*/
+    /*减少下边框*/
+}
+body > main{
+    margin-top: -350px;
+}
+body > main .downloadresume-wrapper{
+    text-align:center;
+}
+
+
+body > main .downloadresume{
+    font-size: 16px;
+    line-height: 16px;
+    padding: 21px 55px;
+    /*内联元素左右元素padding有用，上下没有用*/
+    border: 1px solid #cdcfd1;
+    background: #efefef;
+    display: inline-block;
+    /*内联元素加入inline-block能撑起行高*/
+    border-radius: 4px;
+    font-weight: bold;
+    margin: 35px 0;
+    transition: box-shadow 0.3s;
+    /*添加hover box-shadow的过渡效果时间*/
+}
+body > main .downloadresume:hover{
+    box-shadow: 10px 10px 15px -5px rgba(0,0,0,0.2);
 }
