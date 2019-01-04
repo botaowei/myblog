@@ -17,6 +17,12 @@ hr{
     border-top: 1px solid gray;
 }
 /* color是可以继承的 */
+ul,ol{
+    list-style: none;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: normal;
+}
 .clearfix::after{
     content: '';
     display: block;
@@ -101,6 +107,8 @@ background-size: cover;
     margin-right: auto;
     /*div居中套路*/
     background-color: white;
+    box-shadow: 10px 10px 15px -5px rgba(0,0,0,0.1);
+
 }
 .usercard .welcome{
     background:#e6686a;
@@ -207,4 +215,66 @@ body > main .downloadresume{
 }
 body > main .downloadresume:hover{
     box-shadow: 10px 10px 15px -5px rgba(0,0,0,0.2);
+}
+.selfintroduction{
+    max-width: 940px;
+    /*小于940px会自适应*/
+    margin-left: auto;
+    margin-right: auto;
+    /*div居中套路*/
+    text-align: center;
+}
+section.skills{
+    max-width: 940px;
+    /*小于940px会自适应*/
+    margin-left: auto;
+    margin-right: auto;
+    /*div居中套路*/
+    margin-top: 30px;
+}
+section.skills >h2{
+    text-align: center;
+    color: #3d4451;
+    font-size: 34px;
+    line-height: 1.2;
+    font-weight: 600;
+}
+section.skills > ol > li > h3{
+    font-size: 14px;
+    line-height: 1.1;
+    padding-right: 40px;
+}
+section.skills > ol{
+    background: white;
+    box-shadow: 10px 10px 15px -5px rgba(0,0,0,0.2);
+    padding: 42px 50px 10px;
+    margin-top: 30px;
+}
+section.skills > ol > li{
+    float: left;
+    width: 50%;
+    /*50%是算padding10px的*/
+    box-sizing: border-box;
+    /*隆重介绍，内部自适应满足*/
+    padding-right: 10px;
+} 
+section.skills > ol > li:nth-child(odd){
+}
+section.skills > ol > li:nth-child(even){
+    float: right;
+}
+/*伪类，表示状态，一个冒号，可以选择一些元素
+2个冒号的表示伪元素*/
+
+
+section.skills .progressbar{
+    height: 5px;
+    background: #fae1e1;
+    border-radius: 2px;
+    margin: 4px 0 40px;
+}
+section.skills .progressbar .progress{
+    height: 100%;
+    background: #e6686a;
+    width: 60%;
 }
