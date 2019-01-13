@@ -312,7 +312,7 @@ section.portfolio > nav .bar{
     height: 5px;
     background: white;
     margin-top: 10px;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
 }
 section.portfolio > nav .bar-inner{
     height: 100%;
@@ -342,18 +342,21 @@ section.portfolio .works > .small{
  /*加了绝对定位元素不在文档流，对应div高度为0*/   
 }
 footer.copyright{
-    background-color: #e6686a;
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
+    margin-bottom: 10px;
+}
+footer.copyright > p{
+    color:grey;
 }
 footer.copyright > a{
+    text-decoration: none; 
     display: inline-block;
     /*用a样式包裹住*/
+    color: gray;
 }
-
-.copyright svg{
-        width: 90px;
-        height: 40px;
-        fill: white;
-        vertical-align: top;
-        /*减少下边框*/
-    }
+footer.copyright > p >a:hover{
+    color: black;
+}
