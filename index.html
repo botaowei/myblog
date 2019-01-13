@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>老酷的个人简历</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="//at.alicdn.com/t/font_880073_y0yyemo8dd.js"></script>
+    <script src="//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js"></script>
     <style type="text/css">
         .icon {
            width: 1em; height: 1em;
@@ -181,21 +181,52 @@
         </li>
         </ol>
     </section>
-    <section>
+    <section class="portfolio">
         <h2>作品集</h2>
         <nav>
-            <ol>
-                <li>所有</li>
-                <li>框架</li>
-                <li>原生 js &amp; css</li>
+            <ol class="clearfix">
+                <li id="portfolio1">所有</li>
+                <li id="portfolio2">框架</li>
+                <li id="portfolio3">原生 js &amp; css</li>
             </ol>
+            <div id="portfolioBar" class="bar state-1">
+                <div class="bar-inner">
+                </div>
+            </div>
+            <!--block元素会另起一行-->
         </nav>
-        <div class="jobs">
-            <div class="big"></div>
-            <div class="small"></div>
-            <div class="small"></div>
+        <script>
+        portfolio1.onclick=function(){
+            portfolioBar.className = 'bar state-1'
+        }
+        portfolio2.onclick=function(){
+            portfolioBar.className = 'bar state-2'
+        }
+        portfolio3.onclick=function(){
+            portfolioBar.className = 'bar state-3'
+        }
+        </script>
+        <div class="works" style="height: 597px;">
+            <div class="big" style="top:0; left:0;">
+                <img src="http://myblog-photo.test.upcdn.net/big.webp" alt="作品">
+            </div>
+            <div class="small" style="top: 0; left: 645px;">
+                <img src="http://myblog-photo.test.upcdn.net/small1.webp" alt="作品2">
+            </div>
+            <div class="small" style="top: 297px; left: 645px;">
+                <img src="http://myblog-photo.test.upcdn.net/small2.webp" alt="作品3">
+            </div>
         </div>
     </section>
-
 </body>
+<footer class="copyright">
+        <a href="https://1mb.site/">1mbsite</a>|
+           <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" >
+            <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-youpaiyun"></use>
+                </svg>
+           </a>
+       </p> 
+          
+</footer>
 </html>

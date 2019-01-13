@@ -224,7 +224,8 @@ body > main .downloadresume:hover{
     /*div居中套路*/
     text-align: center;
 }
-section.skills{
+section.skills ,
+section.portfolio {
     max-width: 940px;
     /*小于940px会自适应*/
     margin-left: auto;
@@ -232,7 +233,8 @@ section.skills{
     /*div居中套路*/
     margin-top: 30px;
 }
-section.skills >h2{
+section.skills >h2 ,
+section.portfolio >h2 {
     text-align: center;
     color: #3d4451;
     font-size: 34px;
@@ -278,3 +280,80 @@ section.skills .progressbar .progress{
     background: #e6686a;
     width: 60%;
 }
+section.portfolio > nav{
+   text-align: center; 
+   /*内联元素居中套路*/
+}
+section.portfolio > nav > ol{
+margin: 0 auto;
+display: inline-block;
+/*加了inline-block会有bug*/
+vertical-align: top;
+/*套路*/
+}
+section.portfolio > nav > ol >li{
+    float: left;
+    margin-left: 40px;
+    cursor: pointer;
+}
+/*左浮元素居中是个伪命题，我们需要居中他的父元素*/
+section.portfolio > nav > ol >li:nth-child(1){
+    margin-left: 0;
+}
+section.portfolio{
+    text-align: center;
+}
+section.portfolio > nav{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 35px;
+}
+section.portfolio > nav .bar{
+    height: 5px;
+    background: white;
+    margin-top: 10px;
+    margin-bottom: 100px;
+}
+section.portfolio > nav .bar-inner{
+    height: 100%;
+    background: #e6686a;
+    border-radius: 2px;
+    transition: all 0.3s;
+    /*动画过度*/
+}
+section.portfolio > nav .bar.state-1/*无空格，表示同时符合*/ .bar-inner{
+    margin-left: 0;
+    width: 50px;
+}
+section.portfolio > nav .bar.state-2 .bar-inner{
+    margin-left: 65px;
+    width: 50px;
+}
+section.portfolio > nav .bar.state-3 .bar-inner{
+    margin-left: 145px;
+    width: 98px;
+}
+section.portfolio .works{
+ position: relative;
+}
+section.portfolio .works > .big,
+section.portfolio .works > .small{
+ position: absolute;
+ /*加了绝对定位元素不在文档流，对应div高度为0*/   
+}
+footer.copyright{
+    background-color: #e6686a;
+    text-align: center;
+}
+footer.copyright > a{
+    display: inline-block;
+    /*用a样式包裹住*/
+}
+
+.copyright svg{
+        width: 90px;
+        height: 40px;
+        fill: white;
+        vertical-align: top;
+        /*减少下边框*/
+    }
