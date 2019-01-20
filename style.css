@@ -351,7 +351,7 @@ footer.copyright{
 footer.copyright > p{
     color:grey;
 }
-footer.copyright > a{
+footer.copyright > p >a{
     text-decoration: none; 
     display: inline-block;
     /*用a样式包裹住*/
@@ -359,4 +359,8 @@ footer.copyright > a{
 }
 footer.copyright > p >a:hover{
     color: black;
+}
+.copyright svg{
+    width: 60px;
+    height: 50px;
 }
